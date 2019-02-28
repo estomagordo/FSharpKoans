@@ -91,7 +91,7 @@ module ``about strings`` =
         (* It's time to apply what you've learned so far. Fill in the function below to
            make the asserts pass *)
         let getFunFacts x =
-            let returned = (sprintf "%i doubled is " x) + (sprintf "%i, and " (x * 2)) + (sprintf "%i tripled is " x) + (sprintf "%i!" (x * 3))
+            let returned = sprintf "%i doubled is %i, and %i tripled is %i!" x (x * 2) x (x * 3)
             returned
 
         let funFactsAboutThree = getFunFacts 3
