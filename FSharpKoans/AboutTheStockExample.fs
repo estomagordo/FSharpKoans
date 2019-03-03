@@ -74,10 +74,9 @@ module ``about the stock example`` =
         let result = 
             stockData
             |> List.tail
-            |> List.map splitCommas
-            |> List.map parseDay
+            |> List.map (splitCommas >> parseDay)
             |> List.max
-            |> snd
+            |> snd 
 
         
         AssertEquality "2012-03-13" result
